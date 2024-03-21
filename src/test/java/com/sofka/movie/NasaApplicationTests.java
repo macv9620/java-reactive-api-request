@@ -1,4 +1,4 @@
-package com.sofka.nasa;
+package com.sofka.movie;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
