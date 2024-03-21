@@ -10,7 +10,12 @@ import reactor.core.publisher.Mono;
 
 @Component
 public class MovieGatewayImpl implements IMovieGateway {
-    private final MovieApiRepository movieApiRepository = new MovieApiRepository();
+    private final MovieApiRepository movieApiRepository;
+
+    public MovieGatewayImpl(MovieApiRepository movieApiRepository) {
+        this.movieApiRepository = movieApiRepository;
+    }
+
     @Override
     public Mono<ResponseModel> getMoviesByName(String movieName) {
 
