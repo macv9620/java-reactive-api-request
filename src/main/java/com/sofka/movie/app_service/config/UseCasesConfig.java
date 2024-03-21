@@ -7,7 +7,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = {"com.sofka.movie.infrastructure.adapters", "com.sofka.movie.infrastructure.entrypoints.movie"})
+@ComponentScan(basePackages = {
+        "com.sofka.movie.infrastructure.adapters",
+        "com.sofka.movie.infrastructure.entrypoints.movie",
+        "com.sofka.movie.infrastructure.adapters.nasa_api.repository"})
 public class UseCasesConfig {
     @Bean
     public GetMoviesByNameUseCase createTransactionUseCase(IMovieGateway movieGateway){

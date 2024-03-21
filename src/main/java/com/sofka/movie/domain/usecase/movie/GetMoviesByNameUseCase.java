@@ -1,9 +1,7 @@
 package com.sofka.movie.domain.usecase.movie;
 
-import com.sofka.movie.domain.model.MovieModel;
 import com.sofka.movie.domain.model.ResponseModel;
 import com.sofka.movie.domain.model.gateways.IMovieGateway;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.function.Function;
