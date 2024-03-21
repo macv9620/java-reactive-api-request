@@ -1,13 +1,15 @@
 package com.sofka.movie.domain.usecase.movie;
 
 import com.sofka.movie.domain.model.MovieModel;
+import com.sofka.movie.domain.model.ResponseModel;
 import com.sofka.movie.domain.model.gateways.IMovieGateway;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.function.Function;
 
 
-public class GetMoviesByNameUseCase implements Function<String, Flux<MovieModel>> {
+public class GetMoviesByNameUseCase implements Function<String, Mono<ResponseModel>> {
 
     private final IMovieGateway movieGateway;
 
@@ -16,7 +18,7 @@ public class GetMoviesByNameUseCase implements Function<String, Flux<MovieModel>
     }
 
     @Override
-    public Flux<MovieModel> apply(String movieName) {
+    public Mono<ResponseModel> apply(String movieName) {
         return movieGateway.getMoviesByName(movieName);
     }
 }

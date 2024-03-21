@@ -55,3 +55,4 @@ public class MovieModel {
         this.vote_average = vote_average;
     }
 }
+

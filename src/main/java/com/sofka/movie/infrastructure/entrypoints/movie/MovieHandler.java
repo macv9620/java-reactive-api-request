@@ -1,6 +1,7 @@
 package com.sofka.movie.infrastructure.entrypoints.movie;
 
 import com.sofka.movie.domain.model.MovieModel;
+import com.sofka.movie.domain.model.ResponseModel;
 import com.sofka.movie.domain.usecase.movie.GetMoviesByNameUseCase;
 import com.sofka.movie.infrastructure.entrypoints.movie.wrapper.ResponseWrapper;
 import org.springframework.http.HttpStatus;
@@ -27,10 +28,10 @@ public class MovieHandler {
 
         System.out.println(name);
 
-        Flux<MovieModel> movieFlux = getMoviesByNameUseCase.apply(name);
+        Mono<ResponseModel> movieResult = getMoviesByNameUseCase.apply(name);
 
         // Call the use case with the extracted name parameter
-        return ServerResponse.ok().body(movieFlux, MovieModel.class)
+        return ServerResponse.ok().body(movieResult, ResponseModel.class)
                 .onErrorResume(e -> ServerResponse.status(HttpStatus.INTERNAL_SERVER_ERROR)
                         .bodyValue(new ResponseWrapper<>(e.getMessage(), null)));
     }
