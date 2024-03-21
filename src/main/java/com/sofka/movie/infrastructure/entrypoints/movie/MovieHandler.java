@@ -23,8 +23,6 @@ public class MovieHandler {
             return ServerResponse.badRequest().bodyValue(new ResponseWrapper<>("ID parameter is required", null));
         }
 
-        System.out.println(name);
-
         return getMoviesByNameUseCase.apply(name)
                 .flatMap(movieResult -> ServerResponse.ok().bodyValue(movieResult))
                 .onErrorResume(e -> ServerResponse.status(HttpStatus.UNAUTHORIZED)

@@ -4,16 +4,16 @@ import java.util.List;
 
 public class ResponseModel {
     private String page;
-    private Integer total_pages;
-    private Integer total_results;
+    private Integer totalPages;
+    private Integer totalResults;
 
-    private List<MovieModel> results;
+    private List<MovieModel> movies;
 
-    public ResponseModel(String page, Integer total_pages, Integer total_results, List<MovieModel> results) {
+    public ResponseModel(String page, Integer totalPages, Integer totalResults, List<MovieModel> movies) {
         this.page = page;
-        this.total_pages = total_pages;
-        this.total_results = total_results;
-        this.results = results;
+        this.totalPages = totalPages;
+        this.totalResults = totalResults;
+        this.movies = movies;
     }
 
     public String getPage() {
@@ -24,27 +24,27 @@ public class ResponseModel {
         this.page = page;
     }
 
-    public Integer getTotal_pages() {
-        return total_pages;
+    public Integer getTotalPages() {
+        return totalPages;
     }
 
-    public void setTotal_pages(Integer total_pages) {
-        this.total_pages = total_pages;
+    public void setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
     }
 
-    public Integer getTotal_results() {
-        return total_results;
+    public Integer getTotalResults() {
+        return totalResults;
     }
 
-    public void setTotal_results(Integer total_results) {
-        this.total_results = total_results;
+    public void setTotalResults(Integer totalResults) {
+        this.totalResults = totalResults;
     }
 
-    public List<MovieModel> getResults() {
-        return results;
+    public List<MovieModel> getMovies() {
+        return movies;
     }
 
-    public void setResults(List<MovieModel> results) {
-        this.results = results;
+    public void setMovies(List<MovieModel> movies) {
+        this.movies = movies;
     }
 }

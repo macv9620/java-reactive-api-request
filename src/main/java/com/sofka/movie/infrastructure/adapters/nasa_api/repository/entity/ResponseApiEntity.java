@@ -2,14 +2,14 @@ package com.sofka.movie.infrastructure.adapters.nasa_api.repository.entity;
 
 import java.util.List;
 
-public class ResponseEntity {
+public class ResponseApiEntity {
     private String page;
     private Integer total_pages;
     private Integer total_results;
 
     private List<MovieEntity> results;
 
-    public ResponseEntity(String page, Integer total_pages, Integer total_results, List<MovieEntity> results) {
+    public ResponseApiEntity(String page, Integer total_pages, Integer total_results, List<MovieEntity> results) {
         this.page = page;
         this.total_pages = total_pages;
         this.total_results = total_results;

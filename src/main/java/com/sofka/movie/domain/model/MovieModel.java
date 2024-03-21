@@ -2,17 +2,17 @@ package com.sofka.movie.domain.model;
 
 public class MovieModel {
     private String id;
-    private String original_title;
+    private String originalTitle;
     private String overview;
-    private String release_date;
-    private String vote_average;
+    private String releaseDate;
+    private String voteAverage;
 
-    public MovieModel(String id, String original_title, String overview, String release_date, String vote_average) {
+    public MovieModel(String id, String originalTitle, String overview, String releaseDate, String voteAverage) {
         this.id = id;
-        this.original_title = original_title;
+        this.originalTitle = originalTitle;
         this.overview = overview;
-        this.release_date = release_date;
-        this.vote_average = vote_average;
+        this.releaseDate = releaseDate;
+        this.voteAverage = voteAverage;
     }
 
     public String getId() {
@@ -23,12 +23,12 @@ public class MovieModel {
         this.id = id;
     }
 
-    public String getOriginal_title() {
-        return original_title;
+    public String getOriginalTitle() {
+        return originalTitle;
     }
 
-    public void setOriginal_title(String original_title) {
-        this.original_title = original_title;
+    public void setOriginalTitle(String originalTitle) {
+        this.originalTitle = originalTitle;
     }
 
     public String getOverview() {
@@ -39,20 +39,20 @@ public class MovieModel {
         this.overview = overview;
     }
 
-    public String getRelease_date() {
-        return release_date;
+    public String getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setRelease_date(String release_date) {
-        this.release_date = release_date;
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
-    public String getVote_average() {
-        return vote_average;
+    public String getVoteAverage() {
+        return voteAverage;
     }
 
-    public void setVote_average(String vote_average) {
-        this.vote_average = vote_average;
+    public void setVoteAverage(String voteAverage) {
+        this.voteAverage = voteAverage;
     }
 }
 
