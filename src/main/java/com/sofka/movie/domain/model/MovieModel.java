@@ -7,7 +7,7 @@ public class MovieModel {
     private String releaseDate;
     private String voteAverage;
 
-    //TEST FOR CONFLICT FORM DEV
+    //CONFLICT FROM MAIN
 
     public MovieModel(String id, String originalTitle, String overview, String releaseDate, String voteAverage) {
         this.id = id;
